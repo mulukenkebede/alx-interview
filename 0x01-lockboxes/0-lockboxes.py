@@ -1,20 +1,29 @@
+#!/usr/bin/python3
+
+"""
+Problem: You have n number of locked boxes in front of you.
+         Each box is numbered sequentially from 0 to n - 1
+         and each box may contain keys to the other boxes.
+Task: Write a method that determines if all the boxes can be opened.
+"""
+
+
 def canUnlockAll(boxes):
-    # Create a set to keep track of the box indices that have been opened
-    opened_boxes = {0}
-    # Create a list to keep track of the keys that have been obtained
-    keys = boxes[0]
-    # Loop through the list of keys and boxes until no new boxes can be opened
-    while True:
-        # Check if all boxes have been opened
-        if len(opened_boxes) == len(boxes):
-            return True
-        # Check if there are any new boxes that can be opened
-        new_boxes = set(keys) - opened_boxes
-        if not new_boxes:
-            return False
-        # Add the new boxes to the set of opened boxes
-        opened_boxes |= new_boxes
-        # Get the keys from the new boxes and add them to the list of keys
-        keys = []
-        for box in new_boxes:
-            keys += boxes[box]
+    """
+    Function that checks with boolean value if the list type and
+    length to invoke two for iterations one to traverse the list
+    and the other to compaer if key is idx or not in order to open
+    """
+    if type(boxes) is not list:
+        return False
+    elif (len(boxes)) == 0:
+        return False
+    for k in range(1, len(boxes) - 1):
+        boxes_checked = False
+        for idx in range(len(boxes)):
+            boxes_checked = k in boxes[idx] and k != idx
+            if boxes_checked:
+                break
+        if boxes_checked is False:
+            return boxes_checked
+    return True
