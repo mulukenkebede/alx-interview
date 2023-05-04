@@ -1,18 +1,28 @@
-import math
+#!/usr/bin/python3
+"""
+Given a number n, write a method that calculates the
+fewest number of operations needed to result in exactly
+n H characters in the file.
+"""
+
 
 def minOperations(n):
-    if n < 1:
-        return 0
+    """
+    Returns a list of lists of integers
+    representing the Pascal’s triangle of n.
+    """
     result = 0
     i = 2
-    while i <= math.sqrt(n):
+
+    if isinstance(n, int) and n < 2:
+        return 0
+
+    while i <= n + 1:
         if n % i == 0:
-            count = 0
-            while n % i == 0:
-                n = n // i
-                count += 1
-            result += count
-        i += 1
-    if n > 1:
-        result += 1
+            result += i
+            n //= i
+            i = 2
+        else:
+            i += 1
+
     return result
