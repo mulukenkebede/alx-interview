@@ -1,25 +1,20 @@
-0x05. N Queens
+# 0x05. N Queens
 AlgorithmPython
 
-By: Alexa Orrico, Software Engineer at Holberton School
-Requirements
-General
-Allowed editors: vi, vim, emacs
-All your files will be interpreted/compiled on Ubuntu 14.04 LTS using python3 (version 3.4.3)
-All your files should end with a new line
-The first line of all your files should be exactly #!/usr/bin/python3
-A README.md file, at the root of the folder of the project, is mandatory
-Your code should use the PEP 8 style (version 1.7.*)
-All your files must be executable
-Tasks
+By: muluken kebede
+## Requirements
+#### General
+        Allowed editors: vi, vim, emacs
+        All your files will be interpreted/compiled on Ubuntu 14.04 LTS using python3 (version 3.4.3)
+        All your files should end with a new line
+        The first line of all your files should be exactly #!/usr/bin/python3
+        A README.md file, at the root of the folder of the project, is mandatory
+        Your code should use the PEP 8 style (version 1.7.*)
+        All your files must be executable
+
+## Tasks
 0. N queens
-mandatory
-
-
-Chess grandmaster Judit Polgár, the strongest female chess player of all time
-
 The N queens puzzle is the challenge of placing N non-attacking queens on an N×N chessboard. Write a program that solves the N queens problem.
-
 Usage: nqueens N
 If the user called the program with the wrong number of arguments, print Usage: nqueens N, followed by a new line, and exit with the status 1
 where N must be an integer greater or equal to 4
@@ -40,10 +35,10 @@ julien@ubuntu:~/0x08. N Queens$ ./0-nqueens.py 6
 [[0, 2], [1, 5], [2, 1], [3, 4], [4, 0], [5, 3]]
 [[0, 3], [1, 0], [2, 4], [3, 1], [4, 5], [5, 2]]
 [[0, 4], [1, 2], [2, 0], [3, 5], [4, 3], [5, 1]]
-julien@ubuntu:~/0x08. N Queens$
 
-Repo:
 
-GitHub repository: alx-interview
-Directory: 0x05-nqueens
-File: 0-nqueens.py
+#### Repo:
+
+    GitHub repository: alx-interview
+    Directory: 0x05-nqueens
+    File: 0-nqueens.py
